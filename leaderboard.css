@@ -118,6 +118,22 @@ a{
 
 }
 
+@media only screen and (max-width: 550px) {
+    .title{
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .rankBox{
+        font-size: 12px;
+    }
+    .myRank{
+        padding: 5px;
+        border-radius: 10px;
+    }
+    .myRank .bottomRow{
+        font-size: 16px;
+    }
+  }
 
 
 
