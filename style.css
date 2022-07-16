@@ -5,6 +5,25 @@ body{
 .row{
     margin: 0;
 }
+#fullScreenToggle{
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #aaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+#fullScreenToggle:hover{
+    border: 3px solid rgb(0, 0, 0);
+}
 .preBtn{
     width: 80px;
     border: 1px solid blue;
@@ -16,6 +35,7 @@ body{
     font-size: 16px;
     padding: 5px 0;
     border-radius: 3px;
+    transition: all 0.15s ease;
 }
 .nextBtn{
     width: 80px;
@@ -28,7 +48,14 @@ body{
     font-size: 16px;
     padding: 5px 0;
     border-radius: 3px;
+    transition: all 0.15s ease;
 }
+ .preBtn:hover, .nextBtn:hover{
+    transform: scale(1.04);
+ }
+ .preBtn:active,.nextBtn:active{
+    transform: scale(0.96);
+ }
 .display-center{
     display: flex;
     justify-content: center;
@@ -60,6 +87,7 @@ body{
     bottom: 0;
 }
 .options .opt{
+    position: relative;
     margin: 10px;
     padding: 20px;
     border-radius: 3px;
@@ -97,12 +125,23 @@ body{
     border: 2px solid #e3aa00;
  }
  .okActive{
+    transform: scale(0.96);
     border-color:  rgb(0, 0, 0);
+    pointer-events: none;
  }
- .okActive i{
-    color: rgb(8, 8, 8);
+ .options .fa-circle-check{
+    display: none;
+    position: absolute;
+    top: 5px;
+    right: -5px;
+ }
+ .okActive .fa-circle-check{
+    display: block;
  }
  @media only screen and (max-width: 1000px) {
+    #fullScreenToggle{
+        display: none;
+    }
     .options{
         position: relative;
     }
