@@ -1,0 +1,140 @@
+:root {
+    --main-bg-color: #00869d;
+    --main-text-color: #00869d;
+    --second-text-color: #bbbec5;
+    --second-bg-color: #c1deef;
+}
+  
+.primary-text {
+  color: var(--main-text-color);
+}
+  
+.second-text {
+  color: var(--second-text-color);
+}
+  
+.primary-bg {
+  background-color: var(--main-bg-color);
+}
+  
+.secondary-bg {
+  background-color: var(--second-bg-color);
+}
+  
+.rounded-full {
+  border-radius: 100%;
+}
+  
+#wrapper {
+  overflow-x: hidden;
+  background-color:#dfe9ff;
+}
+  
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  -webkit-transition: margin 0.25s ease-out;
+  -moz-transition: margin 0.25s ease-out;
+  -o-transition: margin 0.25s ease-out;
+  transition: margin 0.25s ease-out;
+  background-color: #f7f7f7;
+}
+  
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+  
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+  
+#page-content-wrapper {
+  min-width: 100vw;
+}
+  
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+  
+#menu-toggle {
+  cursor: pointer;
+}
+
+#quizlandIcon {
+  height: 100px;
+}
+
+.sidebar-links{
+  cursor: pointer;
+}
+  
+.list-group-item {
+  border: none;
+  padding: 20px 30px;
+}
+  
+.list-group-item.active {
+  background-color: transparent;
+  color: var(--main-text-color);
+  font-weight: bold;
+  border: none;
+}
+
+.hidden{
+  display: none;
+}
+
+.modal-body{
+  text-align: left;;
+}
+
+/* create page css  */
+.create-page-container{
+  text-align: center;
+  padding: 0 300px;
+}
+
+.quiz-maker-btn{
+  margin: 5px 5px;
+}
+
+.correct-option-selector{
+  display: flex;
+  align-items: center;
+}
+  
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+  
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+  
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}
+
+@media (max-width: 768px){
+  .create-page-container{
+    padding: 0 10px;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
